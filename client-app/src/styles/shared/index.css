@@ -1,0 +1,61 @@
+@media (max-width: 767px) {
+	body {
+		padding-top: 50px;
+	}
+
+	.vehicle-list-entity {
+		width: 100% !important;
+	}
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+u {
+	cursor: pointer;
+}
+
+a,
+a:hover {
+	color: unset;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.loading-app {
+	height: 66px;
+	width: 66px;
+	background-image: url('/loading.gif');
+	margin: 100px auto 0 auto;
+}
+
+.spacer {
+	margin: 10px 0;
+}
+
+.alert,
+.form-control {
+	max-width: 350px;
+}
+
+.sm-input-first {
+	float: left;
+	margin-right: 10px;
+}
+
+.form-control.sm {
+	max-width: 170px;
+}
+
+.alert {
+	margin: 10px;
+}

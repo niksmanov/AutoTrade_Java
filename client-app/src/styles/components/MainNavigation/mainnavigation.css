@@ -1,0 +1,67 @@
+﻿.main-nav .glyphicon {
+	margin-right: 20px;
+}
+
+.main-nav .navbar-nav .active a,
+.main-nav .navbar-nav .active a:hover,
+.main-nav .navbar-nav .active a:focus {
+	background-image: none;
+	background-color: #4189C7;
+	color: white;
+}
+
+@media (min-width: 768px) {
+	.main-nav {
+		height: 100%;
+		border-radius: 0;
+		border-width: 0;
+		width: 50px;
+	}
+
+		.main-nav .navbar-header {
+			float: none;
+		}
+
+		.main-nav .navbar-collapse {
+			border-top: 1px solid #444;
+			padding: 0;
+		}
+
+		.main-nav .container-fluid {
+			padding: 0;
+			margin: 0;
+		}
+
+			.main-nav .container-fluid .navbar-brand {
+				margin: 0;
+			}
+
+		.main-nav ul {
+			float: none;
+		}
+
+		.main-nav li {
+			font-size: 15px;
+			width: 50px;
+		}
+
+			.main-nav li a {
+				padding: 10px 16px;
+				border-radius: 5px;
+			}
+
+			.main-nav li:hover,
+			.main-nav .navbar-brand:hover {
+				width: auto;
+				background-image: none;
+				background-color: #4189C7;
+				border-radius: 5px;
+				transition: 0.5s ease-in-out;
+			}
+
+		.main-nav a {
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+}
