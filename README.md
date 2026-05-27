@@ -7,9 +7,28 @@ Auto Trade is a Java 25 application with React and Redux for selling vehicles an
 ### Used technologies:
 
 * Java 25
-* Spring Boot
+* Spring Boot 4
 * React 16.6
 * Redux 3.7
+
+Create a local SQL login for development:
+
+```sql
+CREATE DATABASE AutoTrade;
+CREATE LOGIN autotrade WITH PASSWORD = 'AutoTrade_dev_123', CHECK_POLICY = OFF;
+USE AutoTrade;
+CREATE USER autotrade FOR LOGIN autotrade;
+ALTER ROLE db_owner ADD MEMBER autotrade;
+```
+
+To override the SQL Server connection, set `DB_URL` before running:
+
+```powershell
+$env:DB_URL="jdbc:sqlserver://localhost:1433;databaseName=AutoTrade;encrypt=true;trustServerCertificate=true"
+$env:DB_USERNAME="autotrade"
+$env:DB_PASSWORD="your-password"
+.\mvnw.cmd spring-boot:run
+```
 
 
 :rocket: [**Website of the application**](https://autotrade-bulgaria.herokuapp.com/)

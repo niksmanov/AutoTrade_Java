@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  jackson:
+    mapper:
+      accept-case-insensitive-properties: true
+  datasource:
+    url: ${DB_URL:jdbc:sqlserver://localhost:1433;databaseName=AutoTrade;encrypt=true;trustServerCertificate=true}
+    username: ${DB_USERNAME:autotrade}
+    password: ${DB_PASSWORD:AutoTrade_dev_123}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+autotrade:
+  seed:
+    admin-email: ${ADMIN_EMAIL:admin@autotrade.com}
+    admin-username: ${ADMIN_USERNAME:Admin}
+    admin-password: ${ADMIN_PASSWORD:password}
+  mail:
+    from: ${MAIL_FROM:autotrade.noreply@autotrade.com}

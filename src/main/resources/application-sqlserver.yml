@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:sqlserver://localhost:1433;databaseName=AutoTrade;encrypt=true;trustServerCertificate=true}
+    username: ${DB_USERNAME:autotrade}
+    password: ${DB_PASSWORD:AutoTrade_dev_123}
+  jpa:
+    hibernate:
+      ddl-auto: update
